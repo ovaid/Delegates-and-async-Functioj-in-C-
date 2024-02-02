@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 //Delegates :-  when a mwethod is passing as a parameter to a menthod is called a Delegate ,
 // Syntax :-  [access modifier] delegate [return type] delegateName (paramter name);
 //Delegate is used to declare events and asynchronous methods in C#.
+
 public delegate void MyDelegate(string msg);
 
-namespace YourNamespace
+namespace Rameez
 {
     class Program
     {
@@ -42,11 +43,6 @@ namespace YourNamespace
         {
             Console.WriteLine("Long Process1 Started");
 
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("Long Process 1 Executing");
-            }
-
             await Task.Delay(3000);
 
             Console.WriteLine("Long Process1 Ended");
@@ -57,11 +53,6 @@ namespace YourNamespace
         static async Task<int> LongProcess2()
         {
             Console.WriteLine("Long Process2 Started");
-
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("Long Process 2 Executing");
-            }
 
             await Task.Delay(3000);
 
