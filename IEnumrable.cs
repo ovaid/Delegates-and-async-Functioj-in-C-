@@ -9,6 +9,7 @@ class LazyEagerExecution
 
         foreach (int i in SimpleIterator())
         {
+            Console.WriteLine("this is the SimpleIterator Function()");
             Console.WriteLine(i);
             //UNTILL WE DID NOT USE THE FUNCTION IT WILL NOT RETURM THE VALUES THAT IS ====LAZY ECRCUTION==== 
             //this will print he first return value from the IEnumerable SimpleIterator because it will
@@ -17,13 +18,28 @@ class LazyEagerExecution
             break;
         }
 
-        Console.WriteLine("--------------------------------");
 
         foreach (int i in GetList())
         {
+            Console.WriteLine("this is the starting of GetList Function()");
             //this will print all the values , which GetList() method is returning;
             Console.WriteLine(i);
             //break;
+        }
+
+        List<int> list = new List<int>();
+        list.Add(500);
+        list.Add(600);
+        list.Add(700);
+        list.Add(800);
+        list.Add(900);
+        list.Add(100);
+      Console.WriteLine("this is the use of GetEnumerator() method and MoveNext() method");
+        IEnumerator<int> enumerator = list.GetEnumerator();  // Get an enumerator for the list
+
+        while (enumerator.MoveNext())  // Move to the first element
+        {
+            Console.WriteLine(enumerator.Current);  // Access the current element
         }
 
     }
@@ -32,6 +48,7 @@ class LazyEagerExecution
     public static IEnumerable<int> SimpleIterator()
     {
         yield return 100;
+    
 
         for (int i = 0; i < 5; i++) yield return i;
 

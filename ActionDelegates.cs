@@ -9,33 +9,33 @@ examples are given below :-
 */
 using System;
 
-public delegate void Print(int val);
+public delegate void Print(string val);
 
 namespace Rameez
 {
     class Program
     {
-        static void ConsolePrint(int i)
+        static void ConsolePrint(string s)
         {
-            Console.WriteLine(i);
+            Console.WriteLine(s);
         }
 
         static void Main(string[] args)
         {
             Print prnt = ConsolePrint;
-            prnt(0418);
+            prnt("0418");
 
             // Using Action keyword
-            Action<int> printActionDel = ConsolePrint;
-            printActionDel(0418);
+            Action<string> printActionDel = ConsolePrint;
+            printActionDel("0418");
 
             // Using Action with new keyword
-            Action<int> printActionDel2 = new Action<int>(ConsolePrint);
-            printActionDel2(0418);
+            Action<string> printActionDel2 = new Action<string>(ConsolePrint);
+            printActionDel2("0418");
 
             // Using lambda function/anonymous function
-            Action<int> printActionDel3 = (i) => Console.WriteLine(i);
-            printActionDel3(0418);
+            Action<string> printActionDel3 = (s) => Console.WriteLine(s);
+            printActionDel3("0418");
         }
     }
 }
