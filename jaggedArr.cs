@@ -28,7 +28,6 @@ class Rameez
             {
                 Console.Write(jaggedArr[i][j] + " ,");
             }
-
             Console.WriteLine();
         }
     }
