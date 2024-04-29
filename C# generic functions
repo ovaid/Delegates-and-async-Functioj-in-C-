@@ -81,8 +81,6 @@ public class HelloWorld
             Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
         }
 
-        //obj.gen<Dictionary<string, int>>(dict, dict, dict); 
-
         obj.gen<string>(strValue, strValue, strValue);
     }
 }
