@@ -72,10 +72,9 @@ public class HelloWorld
         Console.WriteLine($"String value: {strValue}");
         
         Dictionary<string, int> dict = new Dictionary<string, int>();
-        dict["key1"] = 10;
-        dict["key2"] = 20;
-        dict["key3"] = 30;
-
+        dict["Ovaid"] = 418; ======this is my keyValue pair 1
+        dict["Aasifa"] = 1;  ======this is my keyValue pair 2
+        dict["Rameez"] = 18; ======this is my keyValue pair 3
         // Print dictionary contents
         foreach (var kvp in dict)
         {
