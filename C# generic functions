@@ -93,3 +93,96 @@ Key: key1, Value: 10
 Key: key2, Value: 20
 Key: key3, Value: 30
 Rameez, Rameez, Rameez
+
+
+
+=========================================================when both the above types are under the same maiin function=============================================================
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld1
+{
+    public int inMethod(int i)
+    {
+        return i;
+    }
+    
+    public string stMethod(string i)
+    {
+        return i;
+    }
+    
+    public void gen<T>(T value1, T value2, T value3)
+    {
+        Console.WriteLine($"{value1}, {value2}, {value3}");    
+    }
+}
+
+public class HelloWorld2
+{
+    public int inMethod(int i)
+    {
+        return i;
+    }
+    
+    public string stMethod(string i)
+    {
+        return i;
+    }
+    
+    public void gen<T>(T value1, T value2, T value3)
+    {
+        Console.WriteLine($"{value1}, {value2}, {value3}");    
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        HelloWorld1 obj1 = new HelloWorld1();
+        int intValue = obj1.inMethod(418);
+        Console.WriteLine($"Integer value: {intValue}");
+        
+        string strValue = obj1.stMethod("Rameez");
+        Console.WriteLine($"String value: {strValue}");
+        
+        obj1.gen<int>(intValue, intValue, intValue);
+        obj1.gen<string>(strValue, strValue, strValue);
+        
+        Console.WriteLine();
+        
+        HelloWorld2 obj2 = new HelloWorld2();
+        intValue = obj2.inMethod(418);
+        Console.WriteLine($"Integer value: {intValue}");
+        
+        strValue = obj2.stMethod("Rameez");
+        Console.WriteLine($"String value: {strValue}");
+        
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+        dict["key1"] = 10;
+        dict["key2"] = 20;
+        dict["key3"] = 30;
+
+        // Print dictionary contents
+        foreach (var kvp in dict)
+        {
+            Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+        }
+
+        obj2.gen<string>(strValue, strValue, strValue);
+    }
+}
+
+============================output============================
+Integer value: 418
+String value: Rameez
+418, 418, 418
+Rameez, Rameez, Rameez
+
+Integer value: 418
+String value: Rameez
+Key: key1, Value: 10
+Key: key2, Value: 20
+Key: key3, Value: 30
+Rameez, Rameez, Rameez
