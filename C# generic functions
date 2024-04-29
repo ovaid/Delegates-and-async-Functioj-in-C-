@@ -30,7 +30,7 @@ public class HelloWorld
         obj.gen<string>(strValue, strValue, strValue);
     }
 }
-
+/*
 ====================================output====================
 
 Integer value: 418
@@ -41,6 +41,7 @@ Rameez, Rameez, Rameez
 
 
 ===================================================================dictioanry type as a gereics in function in C#===============================================================
+*/
 
 using System;
 using System.Collections.Generic;
@@ -85,7 +86,7 @@ public class HelloWorld
     }
 }
 
-
+/*
 ==============================output==========================
 Integer value: 418
 String value: Rameez
@@ -97,6 +98,7 @@ Rameez, Rameez, Rameez
 
 
 =========================================================when both the above types are under the same maiin function=============================================================
+*/
 using System;
 using System.Collections.Generic;
 
@@ -173,7 +175,7 @@ public class Program
         obj2.gen<string>(strValue, strValue, strValue);
     }
 }
-
+/*
 ============================output============================
 Integer value: 418
 String value: Rameez
@@ -186,3 +188,4 @@ Key: key1, Value: 10
 Key: key2, Value: 20
 Key: key3, Value: 30
 Rameez, Rameez, Rameez
+*/
