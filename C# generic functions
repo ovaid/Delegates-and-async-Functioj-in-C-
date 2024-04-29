@@ -31,3 +31,10 @@ public class HelloWorld
     }
 }
 
+====================================output====================
+
+Integer value: 418
+String value: Rameez
+418, 418, 418
+Rameez, Rameez, Rameez
+
