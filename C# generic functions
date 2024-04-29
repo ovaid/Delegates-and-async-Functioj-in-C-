@@ -1,0 +1,33 @@
+using System;
+
+public class HelloWorld
+{
+    public int inMethod(int i)
+    {
+        return i;
+    }
+    
+    public string stMethod(string i)
+    {
+        return i;
+    }
+    
+    public void gen<T>(T value1, T value2, T value3)
+    {
+        Console.WriteLine($"{value1}, {value2}, {value3}");    
+    }
+
+    public static void Main(string[] args)
+    {
+        HelloWorld obj = new HelloWorld();
+        int intValue = obj.inMethod(418);
+        Console.WriteLine($"Integer value: {intValue}");
+        
+        string strValue = obj.stMethod("Rameez");
+        Console.WriteLine($"String value: {strValue}");
+        
+        obj.gen<int>(intValue, intValue, intValue);
+        obj.gen<string>(strValue, strValue, strValue);
+    }
+}
+
