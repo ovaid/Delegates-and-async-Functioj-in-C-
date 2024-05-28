@@ -1,7 +1,7 @@
 /* 
 Function Delegate Methods👎
-C# includes built_in generic delegate types Func and Actions , so that we don't mneed to 
-define cutome delegates in most cases.
+C# includes built_in generic delegate types,  Func and Actions , so that we don't need to 
+define custome delegates in most cases.
 
 Func is a generic delegate included in the system namespace. It has zero or more input 
 params and one output param. The last param is called the output parameter or we can say
