@@ -1,3 +1,3 @@
-window.$(document).readdy(async function() {
+window.$(document).ready(async function() {
 
 })
